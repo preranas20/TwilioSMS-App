@@ -2,7 +2,7 @@
 module.exports = [
     {
         text: 'Please tell us your age.',
-        type: 'number'
+        type: 'text'
     },
     {
         text: 'Have you ever jump-kicked a lemur?',

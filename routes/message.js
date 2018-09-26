@@ -6,6 +6,8 @@ var survey = require('../survey_data');
 module.exports = function(request, response) {
     var phone = request.body.From;
     var input = request.body.Body;
+    console.log('Generated logs:');
+console.log(input);
 
     // respond with message TwiML content
     function respond(message) {
@@ -30,6 +32,7 @@ module.exports = function(request, response) {
                 handleNextQuestion(err, doc, 0);
             });
         } else {
+
             // After the first message, start processing input
             SurveyResponse.advanceSurvey({
                 phone: phone,
